@@ -1,0 +1,10 @@
+/bin/
+/obj/
+/*.user
+/*.suo
+.idea/
+/*.sln.DotSettings
+.vs/
+*.userosscache
+*.sln.ide
+*.log

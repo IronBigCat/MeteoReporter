@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MeteoReporterTest.MainWindow"
+        Title="Приложение метеоролога"
+        Width="430" Height="380"
+        WindowStartupLocation="CenterScreen">
+
+    <StackPanel Margin="10" Spacing="8">
+
+        <TextBlock Text="Температура (°C):" />
+        <TextBox Name="TemperatureTextBox"
+                 Width="150"
+                 Watermark="например, 20" />
+
+        <TextBlock Text="Состояние:" Margin="0,5,0,0" />
+        <ComboBox Name="ConditionComboBox"
+                  Width="200"
+                  SelectedIndex="0">
+            <ComboBoxItem Content="дождь" />
+            <ComboBoxItem Content="снег" />
+            <ComboBoxItem Content="град" />
+            <ComboBoxItem Content="ясно" />
+            <ComboBoxItem Content="облачно" />
+            <ComboBoxItem Content="туман" />
+        </ComboBox>
+
+        <TextBlock Text="Комментарий:" Margin="0,5,0,0" />
+        <TextBox Name="CommentTextBox"
+                 Width="400" Height="80"
+                 AcceptsReturn="True"
+                 MaxLength="200"
+                 Watermark="Любая заметка (максимум 200 символов)" />
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20" Margin="0,10,0,0">
+            <Button Name="SaveButton"
+                    Content="Сохранить в файл"
+                    Width="140" />
+            <Button Name="ReportButton"
+                    Content="Показать отчёт"
+                    Width="140" />
+        </StackPanel>
+
+        <TextBlock Name="OutputTextBlock"
+                   Text=""
+                   TextWrapping="Wrap"
+                   Margin="0,10,0,0"
+                   Foreground="DarkBlue" />
+
+    </StackPanel>
+</Window>
